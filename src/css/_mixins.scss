@@ -1,0 +1,128 @@
+//Responsive Breakpoints
+
+$breakpoints: (
+  xls: 356px,
+  xs: 414px,
+  xs1: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px
+);
+
+@mixin respond-below($breakpoint) {
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Get the breakpoint value.
+    $breakpoint-value: map-get(
+      $breakpoints,
+      $breakpoint
+    ); // Write the media query.
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+    // If the breakpoint doesn't exist in the map.
+  } @else {
+    // Log a warning.
+    @warn "Invalid breakpoint: #{$breakpoint}.";
+  }
+}
+
+
+@mixin respond-above($breakpoint) {
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Get the breakpoint value.
+    $breakpoint-value: map-get(
+      $breakpoints,
+      $breakpoint
+    ); // Write the media query.
+    @media (min-width: ($breakpoint-value)) {
+      @content;
+    }
+    // If the breakpoint doesn't exist in the map.
+  } @else {
+    // Log a warning.
+    @warn "Invalid breakpoint: #{$breakpoint}.";
+  }
+}
+
+
+//Color variables
+$white: #fff;
+
+$body-color: #2f4858;
+$primary-color: #ff5c87;
+$primary-light: #ffe4eb;
+$primary-light-border: #fed1dd;
+$secondary-color: #49b0ee;
+$secondary-light: #defcfe;
+$secondary-light-border: #bff8fc;
+
+
+//separators
+$separator-color: #e0e5e9;
+$separator-dark: #ccc;
+
+$error-color: #d52f40;
+$success-color: #29ce40;
+$alert-color: #fc801b;
+$alert-lt-color: #fde9d9;
+$alert-yellow: #f7cc00;
+
+
+//submenu colors
+$submenu-inactive: #6e7f8a;
+$submenu-bar: #cccccc;
+
+//mainmenu colors
+$main-menu-color: #949494;
+
+//heights and widths
+$topBar-container-height: 52px;
+$navbar-height: 60px;
+$container-width: 576px;
+
+$user-topBar-ht: 56px;
+$user-botBar-ht: 60px;
+$user-cont-width: 576px;
+
+$reg-bottom-margin: 85px;
+
+//forms
+$field-input: #6c7983;
+
+//greys
+$grey-light-back: #eee;
+$grey-light-border: #dadada;
+
+$grey-dark-back: #ddd;
+
+$grey-dark2-back: #ccc;
+
+$grey-dark3-back: #bbb;
+
+//cross browser functions
+@mixin transition($params) {
+  -webkit-transition: $params;
+     -moz-transition: $params;
+   -khtml-transition: $params;
+       -o-transition: $params;
+          transition: $params;
+}
+
+@mixin shadow($params){
+  -webkit-box-shadow: $params;
+  -moz-box-shadow:    $params;
+  box-shadow:         $params;
+}
+
+
+
+
+
+
+
+
+

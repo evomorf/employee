@@ -1,13 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+
+//Screens
+import Login from './src/screens/Auth/Login'
+
+//Tab navigator
+const Tab = createBottomTabNavigator();
+
+//Stack navigator
+const Auth = createNativeStackNavigator();
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Auth.Navigator screenOptions={{
+        headerShown:false
+      }}>
+        <Auth.Screen name="Login" component={Login} />
+      </Auth.Navigator>
+    </NavigationContainer>
   );
 }
 

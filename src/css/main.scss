@@ -1,0 +1,66 @@
+@import "./_mixins.scss";
+@import "./styles.scss";
+
+.admin-holder{
+    max-width: $container-width;
+    background-color: $white;
+}
+
+
+.input-field{
+	border-bottom-width: 2px;
+    border-bottom-color:  $body-color;
+    font-weight: 300;
+	font-size:1rem ;
+	color: $field-input;
+    border-radius: 0 ;
+    padding: .8rem 0.5rem .9rem 2.3rem;
+    line-height: 1.4rem; 
+    height: auto;
+}
+
+/* Auth Container */
+
+.auth-head{
+    background-color: #eee;
+    position: relative;
+
+    .diagonal-hol{
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+
+        svg{
+            height: 173px;
+            width: 100%;
+
+            @include respond-above(xs1){
+                height: 167px;
+            }
+        }
+    }
+    
+}
+.auth-head-content{
+    padding: 25px 25px 0 25px;
+    position: relative;
+    z-index: 10;
+
+    i{
+        background-color: $body-color;
+        display: inline-block;
+        padding: 1.2rem;
+        border-radius: 50%;
+        margin-right: auto;
+        margin-top: 2rem;
+        margin-bottom: -.6rem;
+
+        @include respond-above(xs1){
+            margin-bottom: -1rem;
+        }
+    }        
+}
+.auth-content{
+    padding: 25px;
+}
