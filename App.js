@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 //Screens
 import Login from './src/screens/Auth/Login'
+import Logo from './src/component/svgs/Logo';
 
 //Tab navigator
 const Tab = createBottomTabNavigator();

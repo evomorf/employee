@@ -4,6 +4,9 @@
 .admin-holder{
     max-width: $container-width;
     background-color: $white;
+    flex:1;
+    justify-content: center;
+    padding: 25px;
 }
 
 
@@ -19,48 +22,15 @@
     height: auto;
 }
 
-/* Auth Container */
 
-.auth-head{
-    background-color: #eee;
-    position: relative;
-
-    .diagonal-hol{
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        right: 0;
-
-        svg{
-            height: 173px;
-            width: 100%;
-
-            @include respond-above(xs1){
-                height: 167px;
-            }
-        }
-    }
-    
-}
-.auth-head-content{
-    padding: 25px 25px 0 25px;
-    position: relative;
-    z-index: 10;
-
-    i{
-        background-color: $body-color;
-        display: inline-block;
-        padding: 1.2rem;
-        border-radius: 50%;
-        margin-right: auto;
-        margin-top: 2rem;
-        margin-bottom: -.6rem;
-
-        @include respond-above(xs1){
-            margin-bottom: -1rem;
-        }
-    }        
-}
-.auth-content{
-    padding: 25px;
+.fab {
+    background-color: $primary-color;
+    width:75px;
+    height:75px;
+    position: absolute;
+    bottom:25px;
+    right:25px;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
 }
