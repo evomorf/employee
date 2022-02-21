@@ -30,5 +30,12 @@ export const styles = StyleSheet.create({
         borderRadius: 100,
         justifyContent: 'center',
         alignItems: 'center',
+    },
+
+    logoSize:{
+        width:100,
+        height:100,
+        marginLeft:'auto',
+        marginRight:'auto',
     }
 });

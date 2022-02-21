@@ -1,12 +1,15 @@
-import { View } from 'react-native'
+import { Button, Pressable } from 'react-native'
 import BackNext from './svgs/BackNext';
 import {styles} from '../stylesheets/styles'
 
-const FAB = ({}) => {
+
+
+const FAB = ({onClick}) => {
+   
     return (
-        <View style={styles.fab}>
+        <Pressable style={styles.fab} onPress={onClick}>
             <BackNext fill="#ffffff" style={{width:25,height:25}}/>
-        </View>
+        </Pressable>
       
     )
 }
